@@ -1,0 +1,163 @@
+/*
+    Color Codes:
+        Background:  #f7f8fa
+        White:       #ffffff
+        Light blue:  #eef2f7
+        Border:      #dde2e8
+        Dark text:   #1f2933
+        Grey text:   #5f6b7a
+        Accent blue: #2563eb
+*/
+
+/* CSS Variables */
+:root {
+    --bg:         #f7f8fa;
+    --white:      #ffffff;
+    --light-blue: #eef2f7;
+    --border:     #dde2e8;
+    --text:       #1f2933;
+    --grey:       #5f6b7a;
+    --accent:     #2563eb;
+}
+
+/* Base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    border-bottom: 0.15em solid var(--accent);
+    padding: 2em 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--text);
+}
+
+header p {
+    margin: 0.5em 0 0;
+    color: var(--accent);
+}
+
+/* Main content area */
+.tabs {
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 2em 1em;
+}
+
+/* Hide the radio buttons (labels act as the tabs) */
+.tabs input {
+    display: none;
+}
+
+/* Tab bar */
+.tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8em;
+}
+
+/* Tabs */
+.tab {
+    padding: 0.6em 1.4em;
+    border: 0.1em solid var(--border);
+    border-radius: 2em;
+    background-color: var(--white);
+    color: var(--grey);
+    cursor: pointer;
+}
+
+.tab:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Highlight the selected tab */
+#tab-data-sources:checked ~ .tab-list label[for="tab-data-sources"],
+#tab-collection-methods:checked ~ .tab-list label[for="tab-collection-methods"],
+#tab-analysis-methods:checked ~ .tab-list label[for="tab-analysis-methods"],
+#tab-publication-venues:checked ~ .tab-list label[for="tab-publication-venues"] {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+    font-weight: bold;
+}
+
+/* Sections are hidden by default */
+.tab-content {
+    display: none;
+    padding-top: 1.5em;
+}
+
+/* Show the selected section */
+#tab-data-sources:checked ~ #data-sources,
+#tab-collection-methods:checked ~ #collection-methods,
+#tab-analysis-methods:checked ~ #analysis-methods,
+#tab-publication-venues:checked ~ #publication-venues {
+    display: block;
+}
+
+/* Section headings */
+.tab-content h2 {
+    color: var(--accent);
+    padding-bottom: 0.4em;
+    border-bottom: 0.1em solid var(--border);
+}
+
+/* Tables */
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    font-size: 0.95em;
+}
+
+/* Table header */
+th {
+    padding: 0.8em 1em;
+    text-align: left;
+    background-color: var(--light-blue);
+    border-bottom: 0.15em solid var(--accent);
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+/* Table body */
+td {
+    padding: 1em;
+    vertical-align: top;
+    border-bottom: 0.1em solid var(--border);
+    color: var(--grey);
+}
+
+tbody tr:hover {
+    background-color: var(--bg);
+}
+
+/* Highlight the first column (source names) */
+td:first-child {
+    color: var(--text);
+    font-weight: bold;
+}
+
+/* "Coming soon" text */
+.placeholder {
+    color: var(--grey);
+    font-style: italic;
+}

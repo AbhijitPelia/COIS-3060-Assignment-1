@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR Knowledge Base</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>MSR Knowledge Base</h1>
+        <p>A reference guide for Mining Software Repositories research.</p>
+    </header>
+
+    <main class="tabs">
+        <input type="radio" name="tabs" id="tab-data-sources" checked>
+        <input type="radio" name="tabs" id="tab-collection-methods">
+        <input type="radio" name="tabs" id="tab-analysis-methods">
+        <input type="radio" name="tabs" id="tab-publication-venues">
+
+        <nav class="tab-list" aria-label="Knowledge base categories">
+            <label class="tab" for="tab-data-sources">Data Sources</label>
+            <label class="tab" for="tab-collection-methods">Collection Methods</label>
+            <label class="tab" for="tab-analysis-methods">Analysis Methods</label>
+            <label class="tab" for="tab-publication-venues">Publication Venues</label>
+        </nav>
+
+        <section id="data-sources" class="tab-content">
+            <h2>Data Sources</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Source</th><th>Data Provided</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>GitHub</td>
+                            <td>Repositories, commits, pull requests, issues, stars</td>
+                            <td>The largest host of open-source projects. Its full development history makes it the most common source for studying collaboration and code evolution.</td>
+                        </tr>
+                        <tr>
+                            <td>Stack Overflow</td>
+                            <td>Questions, answers, tags, user reputation</td>
+                            <td>A developer Q&amp;A site used to study common programming problems, knowledge sharing, and API usage.</td>
+                        </tr>
+                        <tr>
+                            <td>JIRA</td>
+                            <td>Issue tracking, sprint data, bug reports</td>
+                            <td>An issue tracker used by many Apache and industry projects. Useful for studying bug lifecycles and agile planning.</td>
+                        </tr>
+                        <tr>
+                            <td>App Stores</td>
+                            <td>Google Play and Apple App Store reviews, ratings, downloads</td>
+                            <td>User reviews and ratings reveal reported bugs, feature requests, and how releases affect user satisfaction.</td>
+                        </tr>
+                        <tr>
+                            <td>Travis CI / Jenkins</td>
+                            <td>Build logs, test results, deployment data</td>
+                            <td>Continuous integration services whose logs are used to study build failures, flaky tests, and CI practices.</td>
+                        </tr>
+                        <tr>
+                            <td>Mailing Lists</td>
+                            <td>Developer discussions, archives</td>
+                            <td>Archived email discussions from long-running projects, used to study developer communication and decision-making.</td>
+                        </tr>
+                        <tr>
+                            <td>npm Registry</td>
+                            <td>Package dependencies, downloads, versions</td>
+                            <td>The JavaScript package registry, used to study dependency networks, versioning practices, and ecosystem health.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="collection-methods" class="tab-content">
+            <h2>Collection Methods</h2>
+        </section>
+
+        <section id="analysis-methods" class="tab-content">
+            <h2>Analysis Methods</h2>
+        </section>
+
+        <section id="publication-venues" class="tab-content">
+            <h2>Publication Venues</h2>
+        </section>
+    </main>
+</body>
+</html>
