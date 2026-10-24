@@ -155,9 +155,3 @@ td:first-child {
     color: var(--text);
     font-weight: bold;
 }
-
-/* "Coming soon" text */
-.placeholder {
-    color: var(--grey);
-    font-style: italic;
-}
